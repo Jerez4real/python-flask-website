@@ -11,16 +11,23 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {%include 'nav.html'%}
+    <img class="img-fluid" id="banner" src = "https://python-flask-website.andresjerez2.repl.co/static/banner.jpg">
     <div class="container">
     <h1 class="text-center mt-2 mb-4">Home Page</h1>
-      <img class="img-fluid" id="banner" src = "https://python-flask-website.andresjerez2.repl.co/static/banner.jpg">
-    <h2 class="text-center mt-2 mb-4">About Us</h2>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis rhoncus urna neque. Nunc non blandit massa enim nec dui nunc mattis. Libero justo laoreet sit amet. Turpis massa tincidunt dui ut ornare lectus sit amet est. Enim ut sem viverra aliquet eget sit amet tellus cras. Orci eu lobortis elementum nibh tellus molestie nunc non blandit. Erat nam at lectus urna duis convallis convallis tellus. Est ullamcorper eget nulla facilisi etiam dignissim. Vitae suscipit tellus mauris a. Pulvinar etiam non quam lacus suspendisse faucibus. Sed vulputate odio ut enim blandit volutpat maecenas. Amet aliquam id diam maecenas ultricies mi eget mauris. Eget lorem dolor sed viverra ipsum nunc aliquet. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Vulputate dignissim suspendisse in est. Aenean sed adipiscing diam donec adipiscing tristique risus. Turpis nunc eget lorem dolor sed viverra ipsum. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Orci a scelerisque purus semper eget duis.</p>
-  </body>
+      <div class="row" style="margin-bottom:16px;">
+        <div class="col-7">
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis rhoncus urna neque. Nunc non blandit massa enim nec dui nunc mattis. Libero justo laoreet sit amet. Turpis massa tincidunt dui ut ornare lectus sit amet est. Enim ut sem viverra aliquet eget sit amet tellus cras. Orci eu lobortis elementum nibh tellus molestie nunc non blandit. Erat nam at lectus urna duis convallis convallis tellus. Est ullamcorper eget nulla facilisi etiam dignissim. Vitae suscipit tellus mauris a. Pulvinar etiam non quam lacus suspendisse faucibus.</p>
+        </div>
+        <div class="d-none d-md-block col-md-5">
+      <img src="static/office.jpg" style="height:320px; border-radius:4px;">
+        </div>
+      </div>
   <h2 class="text-center mt-2 mb-4">Open Positions</h2>
   <div>
   {%for job in jobs%}
@@ -28,8 +35,10 @@
   {%endfor%}
   </div>
   <div class="text-center">
-  <button class="btn btn-primary btn-lg">Contact Us</button>
+  <a class="btn btn-primary btn-lg" href="mailto:test@hotmail.com?subject=Question about job Opernings">Contact Us</a>
     <p class = "mt-4">Copyright 2023, Andres</p>
   </div>
   </div>
+  {%include 'footer.html'%}
+    </body>
 </html>
